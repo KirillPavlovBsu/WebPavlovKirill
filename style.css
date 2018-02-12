@@ -1,0 +1,153 @@
+body {
+    margin: 0;
+    padding: 0;
+    font: 1em/1.4em Lato;
+    background: #648880;
+}
+
+.toper {
+    height: 50px;
+    width: 100%;
+    background: #293f50;
+    position: relative;
+}
+
+div .reg {
+    color: #8a8ae5;
+    margin-top: -50px;
+    margin-right: 10px;
+    float: right;
+}
+
+div .reg .block {
+    vertical-align: middle;
+}
+
+div .reg .log {
+    float: left;
+}
+
+div .reg .registr {
+    float: right;
+}
+
+div .reg .registr a {
+    color: #fff;
+}
+
+div .reg .registr a:hover {
+    color: aqua;
+}
+
+input {
+    margin: 0 10px 0 5px;
+}
+
+H1 {
+    margin: 15px;
+}
+
+H1 a {
+    transition: 1s;
+    color: #4a4ab1;
+}
+
+a:hover {
+    transition: 0.5s;
+}
+
+.icon {
+    margin-top: -15px;
+    float: left;
+}
+
+a {
+    text-decoration: none;
+}
+
+a ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a .side {
+    min-width: 151px;
+    width: 9%;
+    margin: 20px;
+}
+
+a .menu a {
+    background: #3d3d3d;
+    color: #fff;
+    padding: 10px;
+    display: block;
+    border-bottom: 1px solid #666;
+    transition: 0.5s all;
+    word-break: keep-all;
+}
+
+a .menu a:hover {
+    background: #666;
+    padding: 10px 0 10px 20px;
+}
+
+a .menu li:first-child a,
+a .menu li .menu__drop li:first-child a {
+    border-radius: 3px 3px 0 0;
+}
+
+a .menu li:last-child a,
+a .menu li .menu__drop li:last-child a {
+    border-radius: 0 0 3px 3px;
+    border-bottom: 0;
+}
+
+a .menu li .menu__drop li a {
+    border-radius: 0;
+    border-bottom: 1px solid #666;
+}
+
+a .menu__list {
+    position: relative;
+}
+
+a .menu__list:hover .menu__drop {
+    opacity: 1;
+    top: 0;
+}
+
+a .menu__drop {
+    position: absolute;
+    width: 100%;
+    top: -9999em;
+    left: 100%;
+    border-left: 10px solid transparent;
+    opacity: 0;
+    transition: 0.5s opacity;
+}
+
+a .menu__list::after {
+    content: " ";
+    position: absolute;
+    border: 5px solid;
+    border-color: transparent transparent transparent #eee;
+    top: 1em;
+    right: 0.7em;
+    transition: 0.5s;
+}
+
+a .menu__list:hover::after {
+    transform: scaleX(-1);
+}
+
+a .content {
+    display: inline-flex;
+    flex-direction: row;
+    min-width: 300px;
+    margin: 0.55% 2.3% 1% 0;
+    padding: 0.55%;
+    height: 450px;
+    width: 25%;
+    background: #3d505f;
+}
