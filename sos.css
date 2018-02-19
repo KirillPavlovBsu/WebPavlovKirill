@@ -74,9 +74,9 @@ ul {
 }
 
 .side {
-    position: absolute;
     z-index: 10;
     min-width: 151px;
+    position: absolute;
     width: 9%;
     margin: 20px;
 }
@@ -132,7 +132,6 @@ ul {
 }
 
 .menu__list::after {
-    content: " ";
     position: absolute;
     border: 5px solid;
     border-color: transparent transparent transparent #eee;
@@ -192,60 +191,51 @@ div .photo1 {
     background: white;
     width: 96.1%;
     height: 85%;
-    background-image: url(random.jpg);
-    background-size: cover;
     bottom: 10px;
     position: absolute;
+    background-size: cover;
+    background-image: url(random.jpg);
 }
 
 div .photo2 {
     background: white;
     width: 96.1%;
     height: 85%;
-    background-image: url(kot.jpg);
-    background-size: auto 100%;
     bottom: 10px;
     position: absolute;
+    background-size: auto 100%;
+    background-image: url(kot.jpg);
 }
 
 div .photo3 {
     background: white;
     width: 96.1%;
     height: 85%;
-    background-image: url(pikcha.jpg);
-    background-size: 100% 100%;
     bottom: 10px;
     position: absolute;
+    background-size: 100% 100%;
+    background-image: url(pikcha.jpg);
 }
 
 div .left_pointer {
-    float: left;
     background: transparent;
     width: 5%;
     height: 85%;
     position: absolute;
     bottom: 10px;
+    float: left;
 }
 
 div .right_pointer {
-    right: 9px;
     background: transparent;
     width: 5%;
     height: 85%;
     position: absolute;
     bottom: 10px;
+    right: 9px;
 }
 
-div .left_pointer:hover {
-    float: left;
-    background: #b4abab;
-    transition: 1.5s;
-    width: 5%;
-    height: 85%;
-    position: absolute;
-    bottom: 10px;
-}
-
+div .left_pointer:hover,
 div .right_pointer:hover {
     right: 9px;
     background: #b4abab;
@@ -257,21 +247,19 @@ div .right_pointer:hover {
 }
 
 div .left_pointer::after {
-    content: " ";
     position: absolute;
     border: 10px solid;
-    border-color: transparent grey transparent transparent;
-    top: 12em;
-    left: -0.2em;
-    transition: 0.5s;
-}
-
-div .right_pointer::after {
-    content: " ";
-    position: absolute;
-    border: 10px solid;
-    border-color: transparent transparent transparent grey;
     top: 12em;
     left: 0.5em;
     transition: 0.5s;
+    border-color: transparent grey transparent transparent;
+}
+
+div .right_pointer::after {
+    position: absolute;
+    border: 10px solid;
+    top: 12em;
+    left: 0.5em;
+    transition: 0.5s;
+    border-color: transparent transparent transparent grey;
 }

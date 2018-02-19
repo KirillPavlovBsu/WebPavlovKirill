@@ -1,0 +1,213 @@
+$main-back: #648880 !global
+$white: #fff !global
+$trans: 0.5s !global
+$sat: #666 !global
+$tri: 3px !global
+$full: 100% !global
+$t: transparent !global
+$s: solid !global
+$net: none !global
+
+body
+    margin: 0
+    padding: 0
+    font: 1em/1.4em Lato
+    background: $main-back
+
+.toper
+    display: inline-block
+    height: 50px
+    width: $full
+    background: #293f50
+    position: relative
+
+div .reg
+    color: #8a8ae5
+    margin-top: -50px
+    margin-right: 10px
+    float: right
+    .block
+        vertical-align: middle
+    .log
+        float: left
+    .registr
+        float: right
+    .registr a
+        color: $white
+    .registr a:hover
+        color: aqua
+
+input
+    margin: 0 10px 0 5px
+
+H1
+    margin: 15px
+
+    a
+        transition: 2*$trans
+        color: #4a4ab1
+
+a:hover
+        transition: $trans
+        color: blueviolet
+
+.icon
+    margin-top: -15px
+    float: left
+
+
+a
+    text-decoration: $net
+
+ul
+    padding: 0
+    margin: 0
+    list-style: $net
+
+.side
+    z-index: 10
+    min-width: 151px
+    position: absolute
+    width: 9%
+    margin: 20px
+    
+.menu a
+    background: #3d3d3d
+    color: $white
+    padding: 10px
+    display: block
+    border-bottom: 1px $s $sat
+    transition: 0.5s all
+    word-break: keep-all
+
+.menu a:hover
+    background: $sat
+    padding: 10px 0 10px 20px
+
+.menu li:first-child a,
+.menu li .menu__drop li:first-child a 
+    border-radius: $tri $tri 0 0
+
+.menu li:last-child a,
+.menu li .menu__drop li:last-child a 
+    border-radius: 0 0 $tri $tri
+    border-bottom: 0
+
+.menu li .menu__drop li a
+    border-radius: 0
+    border-bottom: 1px $s $sat
+
+.menu__list
+    position: relative
+
+    &:hover .menu__drop
+        opacity: 1
+        top: 0
+
+.menu__drop
+    position: absolute
+    width: $full
+    top: -9999em
+    left: $full
+    border-left: 10px $s $t
+    opacity: 0
+    transition: $trans opacity
+
+.menu__list::after
+    position: absolute
+    border: 5px $s
+    border-color: $t $t $t #eee
+    top: 1em
+    right: 0.7em
+    transition: $trans
+
+.menu__list:hover::after
+    transform: scaleX(-1)
+
+.content
+    display: inline-flex
+    flex-direction: row
+    min-width: 300px
+    float:right
+    margin: 0.55% 2.3% 1% 0
+    padding: 0.55%
+    height: 450px
+    width: 25%
+    background: #3d505f
+@media screen and (max-width: 1280px)
+    .content
+        height: 400px
+        min-width: 300px
+        width: 37%
+
+@media screen and (max-width: 1024px)
+    .content
+        height: 400px
+        min-width: 450px
+        width: 70%
+
+div
+    .head
+        font-style: italic
+        font-size: 1.3em
+        padding-top: 10px
+        text-align: center
+        color: darkslateblue
+        background: SlateGrey
+        width: 100%
+        height: 10%
+    .content
+        position: relative
+        padding-bottom: 50px
+    @mixin photo
+        background: white
+        width: 96.1%
+        height: 85%
+        bottom: 10px
+        position: absolute
+    .photo1
+        @include photo
+        background-size: cover
+        background-image: url(random.jpg)
+    .photo2
+        @include photo
+        background-size: auto 100%
+        background-image: url(kot.jpg)
+    .photo3
+        @include photo
+        background-size: 100% 100%
+        background-image: url(pikcha.jpg)
+    @mixin point
+        background: transparent
+        width: 5%
+        height: 85%
+        position: absolute
+        bottom: 10px
+    .left_pointer
+        @include point
+        float: left
+    .right_pointer
+        @include point
+        right: 9px
+    @mixin point-hov
+        right: 9px
+        background: #b4abab
+        transition: 1.5s
+        width: 5%
+        height: 85%
+        position: absolute
+        bottom: 10px
+    .left_pointer:hover, .right_pointer:hover
+        @include point-hov
+    @mixin point-aft
+        position: absolute
+        border: 10px solid
+        top: 12em
+        left: 0.5em
+        transition: 0.5s
+    .left_pointer::after
+        @include point-aft
+        border-color: transparent grey transparent transparent
+    .right_pointer::after
+        @include point-aft
+        border-color: transparent transparent transparent grey
